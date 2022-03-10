@@ -1,4 +1,4 @@
-# ZSC 智能网络
+# ZSC Smart Contract NetWork
 
 > 智能合约的友好的区块链网络
 
