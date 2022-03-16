@@ -2,10 +2,10 @@
 
 > A friendly blockchain network for smart contracts
 
-**0.1 Version**
+**Version 1.0**
 
 - [Background](#Background)
-- [Design principles](#Design-principles)
+- [Design concept](#Design-concept)
 - [Number of consensus and validators](#Number-of-consensus-and-validators)
   - [Proof Of Staked Authority](#Proof-Of-Staked-Authority)
   - [Quorum of validator nodes](#Quorum-of-validator-nodes)
@@ -13,10 +13,10 @@
   - [Income](#Income)
 - [Token Economics](#Token-economics)
   - [Native token](#Native-token)
-  - [Other Tokens](#Other-Tokens)
-- [Stakes and On-Chain Governance](#Stakes-and-On-Chain-Governance)
-  - [Pledge of Equity](#Pledge-of-Equity)
-- [Prospect](#Prospect)
+  - [Other tokens](#Other-tokens)
+- [Stakes and On-Chain Governance](#Staking-and-On-Chain-Governance)
+  - [Equity-pledge](#Equity-pledge)
+- [Outlook](#Outlook)
 
 ## Background
 
@@ -105,7 +105,7 @@ During the startup phase, a certain amount of ZTB will be destroyed on BC and th
 
 ZTB cross-chain transfers will be discussed in the following subsections, but for BC to ZSC transfers, it is common to lock the ZTB on the BC from the source address of the transfer to a system-controlled address, and unlock the corresponding amount of ZTB from the special contract to The destination address for transfers on ZSC, or conversely, when switching from ZSC to BC, is to lock ZTB from the source address on ZSC into a special contract and release the locked ZTB on BC from the system address to the destination address. This logic is implemented by code on BC and a series of smart contracts on ZSC.
 
-### Other tokens
+### Other-tokens
 
 Since ZSC is Ethereum compatible, supporting ERC20 contracts on ZSC is called "ZRC20". ZRC20 "enhances" existing protocols by adding more methods that expose more information, such as token units, precision. Token owners are able to decide the cross-chain token binding address.
 
