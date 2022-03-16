@@ -4,18 +4,18 @@
 
 **0.1 Version**
 
-- [background](#background)
-- [design principles] (#design concept)
-- [Number of consensus and validators] (#Number of consensus and validators)
-  - [Proof Of Staked Authority](#Proof Of Staked Authority)
-  - [quorum of validator nodes] (# quorum of validator nodes)
-  - [safety and finality] (#safety and finality)
-  - [income](#income)
-- [Token Economics] (#tokeneconomics)
-  - [native token](#native token)
-  - [Other Tokens] (#Other Tokens)
-- [Stakes and On-Chain Governance] (#Stakes and On-Chain Governance)
-  - [Pledge of Equity](#Pledge of Equity)
+- [Background](#Background)
+- [Design principles](#Design-principles)
+- [Number of consensus and validators](#Number-of-consensus-and-validators)
+  - [Proof Of Staked Authority](#Proof-Of-Staked-Authority)
+  - [Quorum of validator nodes](#Quorum-of-validator-nodes)
+  - [Safety and finality](#Safety-and-finality)
+  - [Income](#Income)
+- [Token Economics](#Token-economics)
+  - [Native token](#Native-token)
+  - [Other Tokens](#Other-Tokens)
+- [Stakes and On-Chain Governance](#Stakes-and-On-Chain-Governance)
+  - [Pledge of Equity](#Pledge-of-Equity)
 - [Prospect](#Prospect)
 
 ## Background
@@ -28,17 +28,17 @@ Despite high expectations for adding smart contract functionality to the ZSC sma
 
 Here we propose the concept of a parallel blockchain of the ZSC smart network to maintain the high performance of the native DEX while friendly support for smart contract functions.
 
-## Design concept
+## Design-concept
 
 The design concept of ZSC intelligent network follows the following principles:
 
-1. **independent blockchain**: Technically, the ZSC Smart Network is an independent blockchain, not a Layer 2 solution. Most of ZSC's underlying technology and business functions should operate independently and not be affected by any other blockchain network.
+1. **independent-blockchain**: Technically, the ZSC Smart Network is an independent blockchain, not a Layer 2 solution. Most of ZSC's underlying technology and business functions should operate independently and not be affected by any other blockchain network.
 
-2. **Ethereum Compatible**: The first practical and widely used smart contract platform was Ethereum. In order to connect with relatively mature applications and communities, ZSC Smart Network has chosen to be compatible with the existing Ethereum mainnet. This means that most **dApps**, ecosystem components and tools will be compatible with ZSC with no or only minor changes; ZSC nodes will only require similar, or slightly higher hardware specifications and operational skills to function . This implementation should provide room for continued compatibility between ZSC and future versions of Ethereum.
+2. **Ethereum-Compatible**: The first practical and widely used smart contract platform was Ethereum. In order to connect with relatively mature applications and communities, ZSC Smart Network has chosen to be compatible with the existing Ethereum mainnet. This means that most **dApps**, ecosystem components and tools will be compatible with ZSC with no or only minor changes; ZSC nodes will only require similar, or slightly higher hardware specifications and operational skills to function . This implementation should provide room for continued compatibility between ZSC and future versions of Ethereum.
 
-3. **Stake-based consensus and on-chain management**: Consensus based on pledge of equity (PoS) is more environmentally friendly and provides more flexible options for community governance. It can be expected that this consensus will have better performance than PoW consensus, i.e. shorter block time and higher transaction processing capacity.
+3. **Stakes-and-On-Chain-Governance**: Consensus based on pledge of equity (PoS) is more environmentally friendly and provides more flexible options for community governance. It can be expected that this consensus will have better performance than PoW consensus, i.e. shorter block time and higher transaction processing capacity.
 
-## Number of consensus and validators
+## Number-of-consensus-and-validators
 
 Based on the above design principles, the consensus protocol of ZSC intelligent network is to achieve the following goals:
 
@@ -48,7 +48,7 @@ Based on the above design principles, the consensus protocol of ZSC intelligent 
 4. Be as compatible with Ethereum as possible.
 5. Equipped with an on-chain governance mechanism based on equity pledge.
 
-### Stake-based Proof of Authority (Proof Of Staked Authority)
+### Proof-Of-Staked-Authority
 
 Although Proof of Work (PoW) has proven to be a practical solution for implementing a decentralized network, it is not environmentally friendly and requires a large number of participants to maintain network security.
 
@@ -84,14 +84,14 @@ The validator's revenue is obtained from the fees collected from each block's tr
 
 A portion of the fee will also be rewarded to relayers communicating across chains. Please refer to the "Repeaters" section below.
 
-## Token Economics
+## Token-Economics
 
 ZTB and ERC20 tokens can be circulated on ZSC at the same time. This defines:
 
 1. Tokens can be created by deploying smart contracts directly on ZSC, in a format similar to ERC20 .
 2. ZTB ​​is the native token of the ZSC intelligent network and the underlying basic token of the ZSC intelligent network.
 
-### Native token
+### Native-token
 
 ZTB works on ZSC in the same way that ETH works on Ethereum, so it is the "native token" of ZSC. This means that in addition to ZTB being used to pay most of the fees on ZSC Smart Network and ZSC Smart Network DEX, ZTB will also be used to:
 
@@ -109,10 +109,10 @@ ZTB cross-chain transfers will be discussed in the following subsections, but fo
 
 Since ZSC is Ethereum compatible, supporting ERC20 contracts on ZSC is called "ZRC20". ZRC20 "enhances" existing protocols by adding more methods that expose more information, such as token units, precision. Token owners are able to decide the cross-chain token binding address.
 
-**Token binding**
+**Token-binding**
 
 
-## Cross-chain transfer and communication
+## Cross-chain-transfer-and-communication
 
 Cross-chain communication is the key infrastructure that allows the community to take advantage of the dual-chain structure:
 
@@ -120,7 +120,7 @@ Cross-chain communication is the key infrastructure that allows the community to
 - Tokens on ZSC can complete programmed transactions and asset circulation in a stable, high-throughput, extremely fast and friendly environment on BC;
 - Users can do this in a unified tool ecosystem and user interface.
 
-### Cross-chain transfer
+### Cross-chain-transfer
 
 Cross-chain transfers are the key to communication between two blockchains. Its logic is:
 
@@ -136,11 +136,11 @@ The cross-chain transfer packet message should allow the ZSC relay and the BC Or
 The architecture of cross-chain communication is shown in the figure above. To accommodate two heterogeneous systems, the communication processing is different in each direction.
 
 
-### Cross-chain user experience
+### Cross-chain-user-experience
 
 Ideally, users want to use two parachains the same way they would use a single chain. It would require adding more composite transaction types to cross-chain communication to support this, which would greatly increase complexity, tight coupling, and maintenance burden. Here, BC and ZSC implement only basic operations to facilitate the flow of value at initial launch, and implement most of the user experience work through the client, such as wallets. For example, a wallet could allow users to send tokens directly from ZSC to BC's DEX to sell tokens in a safe and secure way.
 
-### Cross-chain contract events
+### Cross-chain-contract-events
 
 Cross-chain contract events (CCCE) are designed to allow smart contracts to trigger cross-chain events directly through contract code. This is possible on the basis of:
 1. Standard system contracts can be provided to serve operations that can be invoked by general smart contracts;
@@ -166,7 +166,7 @@ d. The ZSC contract reflects the CAoB's balance and outstanding orders. Whatever
 
 On the basis of the above characteristics, it is very convenient to add cross-chain transfer and transaction functions with high liquidity to all smart contracts of ZSC. It will greatly increase the application scenarios on smart contracts and dApps, enabling Binance Dual Chain to produce a 1+1>2 aggregation effect.
 
-## Staking and On-Chain Governance
+## Staking-and-On-Chain-Governance
 
 PoSA realizes decentralized community governance. You can see similar ideas from other networks, notably Cosmos and EOS. Its core logic can be summarized as follows.
 
@@ -177,7 +177,7 @@ PoSA realizes decentralized community governance. You can see similar ideas from
 5. Validators and delegators have an "unbinding period". When malicious Byzantine behavior is discovered, the tokens will remain locked for a certain period of time, and the perpetrator will be punished in time.
 
 
-### 权益质押
+### Equity-pledge
 
 Ideally, such staking and reward distribution logic should be included in the blockchain and executed automatically when new blocks are produced. This is how the Cosmos Hub, which uses the Tendermint consensus library as the ZSC smart network, works.
 
